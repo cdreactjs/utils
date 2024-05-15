@@ -1,5 +1,5 @@
 {
-  "name": "@cdreact/fullscreen",
+  "name": "@cdreact/utils",
   "version": "1.0.0",
   "license": "MIT",
   "exports": {
@@ -36,6 +36,8 @@
     "url": "https://github.com/cdreactjs/utils/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.10"
+    "@cdreact/types": "^1.0.0",
+    "@cdreact/fullscreen": "^1.0.0",
+    "@cdreact/number": "^1.0.0"
   }
 }

@@ -1,40 +1,38 @@
 {
-  "name": "@cdreact/utils",
+  "name": "utils",
   "version": "1.0.0",
   "description": "",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    }
-  },
-  "source": "./src/index.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "files": [
-    "dist",
-    "README.md"
+  "private": "true",
+  "workspaces": [
+    "packages/*/*"
   ],
+  "type": "module",
   "scripts": {
-    "dev": "parcel watch",
-    "build": "parcel build",
-    "build:packages": "parcel build 'packages/*/*/' --no-cache"
+    "dev": "parcel watch packages/*/*",
+    "build": "parcel build packages/*/* --no-cache",
+    "template": "vite ./templates/demo2"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@parcel/packager-ts": "^2.12.0",
     "@parcel/transformer-typescript-types": "^2.12.0",
     "parcel": "^2.12.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8"
   }
 }
